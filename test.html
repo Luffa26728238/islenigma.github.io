@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付方式</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .payment-method {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+        }
+
+        .payment-method h2 {
+            text-align: center;
+        }
+
+        .option {
+            margin: 10px 0;
+        }
+
+        .option label img {
+            width: 100px;
+        }
+
+        .credit-card-details {
+            margin-top: 10px;
+        }
+
+        .new-card-details {
+            display: none;
+        }
+
+        input[type="text"] {
+            display: block;
+            width: calc(100% - 20px);
+            margin: 5px 0;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-method">
+        <h2>付款方式</h2>
+        <div class="option" id="paypal-option">
+            <input type="radio" id="paypal" name="payment-method" value="PayPal">
+            <label for="paypal">
+                <img src="paypal-logo.png" alt="PayPal">
+            </label>
+        </div>
+        <div class="option" id="credit-card-option">
+            <input type="radio" id="credit-card" name="payment-method" value="CreditCard">
+            <label for="credit-card">
+                <img src="visa-logo.png" alt="信用卡">
+            </label>
+            <div class="credit-card-details">
+                <select>
+                    <option value="bank1">银行1</option>
+                    <option value="bank2">银行2</option>
+                </select>
+                <input type="radio" id="new-card" name="card" value="new">
+                <label for="new-card">新卡片</label>
+                <div class="new-card-details">
+                    <input type="text" placeholder="卡号">
+                    <input type="text" placeholder="有效日期">
+                    <input type="text" placeholder="安全码">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const creditCardOption = document.getElementById('credit-card-option');
+            const newCardRadio = document.getElementById('new-card');
+            const newCardDetails = document.querySelector('.new-card-details');
+
+            creditCardOption.addEventListener('change', function (event) {
+                if (event.target.id === 'new-card') {
+                    newCardDetails.style.display = 'block';
+                } else {
+                    newCardDetails.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

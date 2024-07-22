@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>footer</title>
+    <title>footer</title>   
     <link rel="stylesheet" href="shoppingCart.css">
+
     <link rel="stylesheet" href="footer.css" />
+
 
 </head>
 
@@ -67,7 +69,7 @@
 <main class="main">
     <!-- breadcrumb -->
 <div class="breadcrumb">
-    <div class="shoppingCartActive"><img src="public/shoppingCartIcon.png " alt=""></div>
+    <div class="active-now"><img src="public/shoppingCartIcon.png " alt=""></div>
     <img class="breadcrumbArrow " src="public/breadcrumbArrow.png" alt="">
     <div><img src="public/checkoutIcon.png" alt=""></div>
     <img class="breadcrumbArrow"  src="public/breadcrumbArrow.png" alt="">
@@ -75,10 +77,12 @@
 </div>
 
 <div class="shoppingCart">
+    
     <div class="itemList">
+        <!-- item1 -->
         <div class="item">
             <div class="itemTop">
-                <img src="public/roomImg.png" alt="">
+                <img class="roomImg" src="public/roomImg.png" alt="">
 
                 <div class="shoppingCartItemInfo"><p class="shoppingCartItemTitle">超豪華經典草原精緻帳棚特價優惠</p><hr><p>入住日期:2034/05/02 - 退房日期:2034/05/06</p>
                 <p>床數:雙人床 x1</p></div>
@@ -93,30 +97,34 @@
             </div>
             <hr>    
             <div class="itemBottom"></div>
-        </div>   <div class="item">
-            <div class="itemTop">
-                <img src="public/roomImg.png" alt="">
-
-                <div class="shoppingCartItemInfo"><p class="shoppingCartItemTitle">超豪華經典草原精緻帳棚特價優惠</p><hr><p>入住日期:2034/05/02 - 退房日期:2034/05/06</p>
-                <p>床數:雙人床 x1</p></div>
-                <div class="shoppingCartCounterBox">
-                    <div class="shoppingCartCounter">
-
-                    <div><img src="public/minus.png" alt=""></div><p>0</p> <div><img src="public/plus.png" alt=""></div>
-                
+        </div> 
+            <!-- item2 -->
+      
+            <div class="item">
+                <div class="itemTop">
+                    <img class="roomImg" src="public/roomImg.png" alt="">
+    
+                    <div class="shoppingCartItemInfo"><p class="shoppingCartItemTitle">超豪華經典草原精緻帳棚特價優惠</p><hr><p>入住日期:2034/05/02 - 退房日期:2034/05/06</p>
+                    <p>床數:雙人床 x1</p></div>
+                    <div class="shoppingCartCounterBox">
+                        <div class="shoppingCartCounter">
+    
+                        <div><img src="public/minus.png" alt=""></div><p>0</p> <div><img src="public/plus.png" alt=""></div>
+                    
+                    </div>
+                    </div>
+                    <div class="shoppingCartGarbageCan"><img src="public/garbageCan.png" alt=""></div>
                 </div>
-                </div>
-                <div class="shoppingCartGarbageCan"><img src="public/garbageCan.png" alt=""></div>
-            </div>
-            <hr>    
-            <div class="itemBottom">
-                <div>22</div>
-                <div>22</div>
-            </div>
-        </div>
-
+                <hr>    
+                <div class="itemBottom"></div>
+            </div> 
     </div>
-    <div class="totalPrice">22</div>
+  
+    <div class="totalPriceContainer">
+         <div class="totalPrice"><span>小記:</span> <span>NT$2,000</span></div>
+        <div class="onSale"><span>首購優惠</span> <span>NT$1,600</span></div>
+        <button class="btn buyNow">前往購買手續</button>
+    </div>
 </div>
 
 
@@ -236,7 +244,7 @@
             </div>
         </div>
     </div>
-    
+    <script src="resize.js"></script>
 </body>
 
 </html>

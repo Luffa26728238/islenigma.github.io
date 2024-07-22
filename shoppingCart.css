@@ -8,7 +8,6 @@
     rgb(49, 124, 165),
     hsla(263, 25%, 52%, 1)
   );
-  color: white;
   vertical-align: baseline;
 
   scroll-behavior: smooth;
@@ -228,11 +227,13 @@ body {
 /* Main  */
 
 main {
-  height: 90vh;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .breadcrumb {
   margin: 0 auto;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -258,7 +259,7 @@ main {
   height: 15px;
 }
 
-.shoppingCartActive {
+.active-now {
   background: linear-gradient(to bottom right, #b0f1cf, #9894e1);
   img {
     filter: brightness(0) invert(1);
@@ -267,18 +268,21 @@ main {
 /* ShoppingCart  */
 
 .shoppingCart {
-  margin: 20px 100px;
+  margin: 50px auto;
   height: 90vh;
   display: flex;
-  gap: 200px;
+  justify-content: space-evenly;
+  gap: 80px;
+  transition: transform 0.1s ease-out;
 }
 
 .itemList {
   display: flex;
   gap: 20px;
   flex-direction: column;
+  width: 800px;
   height: 100%;
-  width: 1100px;
+  margin-left: 100px;
 }
 
 .item {
@@ -293,27 +297,24 @@ main {
   border-radius: 40px;
 }
 
-.totalPrice {
-  background-color: violet;
-  height: 100%;
-  width: 500px;
-}
-
 /* Item top */
 .itemTop {
   display: grid;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   grid-template-columns: 1fr 2fr 1fr 0.5fr;
 }
 
-.itemTop img {
-  width: 100%;
+.roomImg {
+  width: 150px;
   height: 120px;
 }
 
 .shoppingCartItemInfo {
   padding: 20px 0;
   display: flex;
+  min-width: 300px;
   gap: 10px;
   flex-direction: column;
 }
@@ -357,7 +358,7 @@ main {
 }
 
 .shoppingCartGarbageCan {
-  transform: scale(0.2);
+  transform: scale(0.5);
 }
 
 /* end item top */
@@ -367,6 +368,59 @@ main {
 .itemBottom {
   display: flex;
   justify-content: space-between;
+}
+
+/*  Total price */
+/* .totalPriceBox {
+  color: rgb(179, 28, 28);
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 300px;
+} */
+/* .totalPriceContainer {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+} */
+
+.totalPriceContainer {
+  color: rgb(179, 28, 28);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 80px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 300px;
+  height: 300px;
+  margin-right: 100px;
+}
+
+.totalPriceContainer div {
+  display: flex;
+}
+.totalPrice {
+  justify-content: space-between;
+  font-size: 20px;
+  width: 140px;
+}
+
+.onSale {
+  gap: 10px;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+
+  width: 210px;
+}
+.buyNow {
+  padding: 12px 24px;
+  background-color: #ffdc81;
+  color: #3e3939;
 }
 
 /* end main */

@@ -18,7 +18,7 @@ const scaleElement = () => {
     shoppingCart.style.transform = `scale(${scaleFactor})` //往左下左縮放
     //   totalPriceContainer.style.transform = `scale(${scaleFactor})`
   } else {
-    shoppingCart.style.transform = "scale(1)" // 复原为原始比例
+    shoppingCart.style.transform = "scale(1)"
   }
 }
 

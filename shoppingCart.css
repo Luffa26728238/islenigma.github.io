@@ -220,6 +220,16 @@ body {
   .header {
     padding: 5px 20px;
   }
+
+  .breadcrumb div {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: -1px 5px 8px #a19595;
+  }
+  .breadcrumb div img {
+    height: 20px;
+  }
 }
 
 /* end nav*/
@@ -227,7 +237,7 @@ body {
 /* Main  */
 
 main {
-  height: 150vh;
+  height: 190vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,9 +245,11 @@ main {
 .breadcrumb {
   margin: 0 auto;
   display: flex;
+  gap: 30px;
   justify-content: space-between;
   align-items: center;
-  width: 800px;
+  width: 60%;
+  min-width: 500px;
   margin-top: 50px;
 }
 
@@ -280,14 +292,16 @@ main {
   display: flex;
   gap: 20px;
   flex-direction: column;
-  width: 800px;
+  width: 70%;
   height: 100%;
   margin-left: 100px;
 }
 
 .item {
-  padding: 20px 80px;
+  padding: 20px 60px;
+
   width: 100%;
+  min-width: 550px;
   height: 200px;
   background: linear-gradient(
     270deg,
@@ -307,7 +321,7 @@ main {
 }
 
 .roomImg {
-  width: 150px;
+  width: 8vw;
   height: 120px;
 }
 

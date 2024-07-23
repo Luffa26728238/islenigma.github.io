@@ -1,5 +1,5 @@
 .successBox {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 40px;
   width: 60%;
   display: flex;
@@ -52,5 +52,17 @@
   }
   .btnOrder:hover {
     transform: scale(1.1);
+  }
+}
+@media (max-width: 1180px) {
+  .successTitle {
+    font-size: 10px;
+  }
+  .successBox {
+    width: 80%;
+  }
+  .followUsText {
+    display: none;
+    font-size: 12px;
   }
 }

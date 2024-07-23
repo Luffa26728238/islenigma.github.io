@@ -1,7 +1,7 @@
 .checkout {
   width: 100%;
   display: flex;
-  gap: 60px;
+  gap: 100px;
   padding: 100px 150px;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .customer {
-  height: 440px;
+  height: 46 0px;
   border: 1px solid black;
   border-radius: 8px;
 }
@@ -38,14 +38,13 @@
 }
 
 .form-group {
-  flex: 1;
   display: flex;
   gap: 10px;
   flex-direction: column;
   justify-content: end;
   padding: 0 25px 20px 25px;
   height: 100px;
-  width: auto;
+  width: 100%;
 }
 
 .username {
@@ -137,6 +136,26 @@
 
 .valid-date {
   display: flex;
+  .date {
+    width: 50%;
+  }
+
+  .safity-code {
+    width: 30%;
+  }
+  .submit {
+    width: 20%;
+    input {
+      background: linear-gradient(
+        270deg,
+        rgba(83, 54, 131, 0.53) 0%,
+        rgba(49, 125, 165, 0.8) 100%
+      );
+      color: #fff;
+      padding: 10px;
+      min-width: 50px;
+    }
+  }
 }
 
 .btn-add-card {
@@ -170,4 +189,54 @@
 }
 .room-price {
   font-size: 24px;
+}
+
+.checkout-phone {
+  background-color: rgb(108, 102, 108);
+  position: fixed;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 8vh;
+  padding: 10px 50px;
+  z-index: 1000;
+
+  .checkout-price {
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    justify-content: center;
+    flex-direction: column;
+    height: inherit;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .checkout {
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    padding: 50px 70px;
+  }
+}
+@media (max-width: 1180px) {
+  .checkout {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 30px;
+  }
+  .checkout-left {
+    width: 100%;
+  }
+
+  .checkout-right {
+    display: none;
+  }
+  .checkout-phone {
+    display: flex;
+  }
 }
